@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ProductGrid from './components/ProductGrid';
 
 const prisma = new PrismaClient();
+export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
   const products = await prisma.product.findMany();

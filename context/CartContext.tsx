@@ -15,6 +15,7 @@ type CartContextType = {
   addToCart: (item: Omit<CartItem, "quantity">) => void;
   removeFromCart: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
+  clearCart: () => void;
   cartTotal: number;
   cartCount: number;
 };
