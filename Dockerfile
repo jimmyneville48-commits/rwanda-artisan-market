@@ -16,4 +16,4 @@ RUN npm run build
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "npx prisma db push --skip-generate && npm run start"]
+CMD ["sh", "-c", "npx prisma db push --skip-generate && node prisma/seed.js && npm run start"]
